@@ -10,9 +10,21 @@ public class LightBoard
    */
   public LightBoard(int numRows, int numCols)
   {
-    /* to be implemented in part (a) */
-
-  }
+      int e = 0;
+	    for(int r = 0; r < lights.length; r++){
+	    	if(lights[row][col] == true)
+			    e++;
+			if(lights[r][col] == true)
+				e++;
+			if(e % 2 == 0)
+				return false;
+		if(lights[row][col] == false)
+			if(lights[r][col] == true)
+				e++;
+			if(e % 3 == 0)
+				return true;
+	} return lights[row][col];
+}
 
   /** Evaluates a light in row index row and column index col and returns a status
    *  as described in part (b).
@@ -20,7 +32,22 @@ public class LightBoard
    */
   public boolean evaluateLight(int row, int col)
   {
-    /* to be implemented in part (b) */
+    int e = 0;
+	for(int r = 0; r < lights.length; r++){
+		if(lights[row][col] == true)
+			e++;
+			if(lights[r][col] == true)
+				e++;
+			if(e % 2 == 0)
+				return false;
+		if(lights[row][col] == false)
+			if(lights[r][col] == true)
+				e++;
+			if(e % 3 == 0)
+				return true;
+	} return lights[row][col];
+}
+
    
  
   }
