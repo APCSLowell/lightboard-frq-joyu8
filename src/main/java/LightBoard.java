@@ -10,6 +10,7 @@ public class LightBoard
    */
   public LightBoard(int numRows, int numCols)
   {
+	lights = new boolean[numRows][numCols];
       int e = 0;
 	    for(int r = 0; r < lights.length; r++){
 	    	if(lights[row][col] == true)
